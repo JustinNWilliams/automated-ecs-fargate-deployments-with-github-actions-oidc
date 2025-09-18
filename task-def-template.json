@@ -1,0 +1,25 @@
+{
+    "family": "my-app-task-def",
+    "containerDefinitions": [
+        {
+            "name": "my-app-container",
+            "image": "hello-world",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "executionRoleArn": "arn:aws:iam::881490111150:role/ecsTaskExecutionRole"
+}
